@@ -7,6 +7,7 @@ import com.mitrais.jpqi.springcarrot.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Optional;
 
 public class EmployeeServiceUsingDB implements EmployeeService{
     @Autowired
@@ -24,5 +25,10 @@ public class EmployeeServiceUsingDB implements EmployeeService{
     @Override
     public List<Employee> findAllCarrot() {
         return employeeRepository.findAll();
+    }
+
+    @Override
+    public Optional<Employee> findEmployeeById(String id) {
+        return employeeRepository.findEmployeeById(id);
     }
 }
