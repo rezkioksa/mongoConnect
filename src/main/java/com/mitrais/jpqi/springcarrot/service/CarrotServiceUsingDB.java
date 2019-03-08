@@ -19,4 +19,8 @@ public class CarrotServiceUsingDB implements CarrotService {
     public void create(Carrot carrot) {
         carrotRepository.save(carrot);
     }
+
+    public List<Carrot> findAllCarrots(){
+        return carrotRepository.findAll();
+    }
 }

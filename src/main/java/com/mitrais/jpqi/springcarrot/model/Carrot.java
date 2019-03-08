@@ -3,11 +3,13 @@ package com.mitrais.jpqi.springcarrot.model;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Id;
+import java.math.BigInteger;
 
-@Document(collection = "carrots")
+//@Document(collection = "#{Carrot.getCollectionName()}")
+@Document(collection = "carrot")
 public class Carrot {
     @Id
-    private int id;
+    private BigInteger id;
     private String type;
     private String basketFrom;
     private String basketTo;
@@ -15,18 +17,39 @@ public class Carrot {
 
     public Carrot() {}
 
-    public Carrot(int id, String type) {
+//    public Carrot(int id, String type) {
+//        this.id = id;
+//        this.type = type;
+//    }
+
+    public Carrot(BigInteger id, String type) {
         this.id = id;
         this.type = type;
     }
 
-    public int getId() {
+    public BigInteger getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(BigInteger id) {
         this.id = id;
     }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    //    public int getId() {
+//        return id;
+//    }
+//
+//    public void setId(int id) {
+//        this.id = id;
+//    }
 
     public String getType() {
         return type;

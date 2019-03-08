@@ -9,4 +9,6 @@ import java.util.Optional;
 @Service
 public interface CarrotService {
     void create(Carrot carrot);
+    public List<Carrot> findAllCarrots();
+
 }
