@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import java.math.BigInteger;
 
 //@Document(collection = "#{Carrot.getCollectionName()}")
-@Document(collection = "carrot")
+@Document(collection = "carrots")
 public class Carrot {
     @Id
     private BigInteger id;
